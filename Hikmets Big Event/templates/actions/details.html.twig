@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+{% block main %}
+	<div class="container m-auto p-3">
+		<div class="row g-0 details">
+			<div class="text-end">
+				<a class="btn btn-info btn-small" href="/edit/{{event.id}}">Update</a>
+				<a class="btn btn-info btn-small" href="/delete/{{event.id}}">Delete</a>
+			</div>
+
+			<div class="p-3">
+				<h5 class="card-titler">{{event.name}}</h5>
+				<p class="h5">
+					<b>Category:</b>
+					{{event.type}}</p>
+				<p>
+					<b>On</b>
+					{{event.datetime|date('F j, Y, g:i a')}}</p>
+				<p>
+					<b>Adress:</b>
+					{{event.address}}</p>
+				<p>
+					<b>Capacity:</b>
+					{{event.capacity}}</p>
+				<p>{{event.description}}</p>
+
+
+				<p>
+					<b>Website:</b>
+				</p>
+			</br>
+			<p>{{event.url}}</p>
+			<p>
+				<b>Contact:</b>
+			</p>
+			<p>{{event.email}}</p>
+		<p><b>Telefon: </b>
+		{{event.phone}}</p>
+	<img src="{{ event.image }}" alt="{{ event.name }}" class="w-50 h-50">
+</div></div></div></div>{% endblock %}

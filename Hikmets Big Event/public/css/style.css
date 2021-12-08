@@ -1,0 +1,13 @@
+header {
+    background-image: url(../Image/hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.titel {
+    height: 40vh;
+}
